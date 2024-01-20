@@ -1,0 +1,170 @@
+@tailwind base;
+
+:root{
+  --text-color:white;
+  --primary-dark:#1F7CEB;
+  --primary-bright:#5f91fb;
+  --background:#f7f7f7;
+}
+
+#terminal-wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 50vh;
+  width:50vw;
+  background-color: #636E73;
+  border-radius: 8px;
+
+  
+
+}
+
+#top-bar{
+ 
+  height: 10%;
+  position: relative;
+}
+
+#terminal-title{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+ 
+ 
+  height: 100%;
+  color: rgb(228, 226, 226);
+  font-size: 1.4rem;
+}
+
+#controls{
+  position: absolute;
+  right:-6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly; 
+ 
+  width: 20%;
+  height: 100%;
+  color: white;
+  
+}
+
+#terminal{
+  background-color: #282C34;
+  border-radius:  0 0 8px 8px;
+  height: 90%;
+  overflow-y: scroll;
+  padding: 1rem;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.2rem;
+}
+
+.round-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C8C8C8;
+  color: black;
+  cursor: pointer;
+ 
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+}
+
+.red-button{
+  background-color: #d65959;
+}
+
+#user-input{
+  background-color: transparent;
+  color:white;
+  margin: none;
+  outline:none;
+  cursor: none;
+  display: inline-block;
+  overflow: hidden;
+  display: inline-block;
+  width: 70%; 
+}
+
+#user-input::after{
+   content: 'XXX'; 
+  color: red;    
+}
+
+#terminal-output{
+  color:white;
+}
+
+*::-webkit-scrollbar {
+  width: 0.8rem;              
+}
+
+*::-webkit-scrollbar-track {
+  background: #C8C8C8;    
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #636E73;  
+  border: 2px solid #C8C8C8; 
+  border-radius: 4px; 
+}
+
+.help-command-item{
+  color:var(--primary-bright)
+
+}
+
+a {
+  text-decoration: underline;
+  display: inline;
+}
+
+.copy-button{
+  cursor: pointer;
+}
+
+.notification{
+  position: absolute;
+  left: 0.6rem;
+  top: 0.6rem;
+  color:white;
+  background-color: rgb(73, 152, 84);
+  padding: 4px 1rem 4px 1rem;
+  border-radius: 0.5rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  #controls{
+    right:0px;
+  }
+  .round-button {
+   
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+  }
+
+  #user-input{
+    background-color: transparent;
+    color:white;
+    margin: none;
+    outline:none;
+    cursor: none;
+    caret:blue underscore;
+    display: inline-block;
+    overflow: hidden;
+    display: inline-block;
+    width: 40%; 
+  }
+  
+}
